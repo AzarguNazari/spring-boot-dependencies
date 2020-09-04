@@ -1,0 +1,57 @@
+---
+# standalone eureka server
+# http://cloud.spring.io/spring-cloud-static/Dalston.SR1/#_standalone_mode
+
+spring:
+  profiles: default
+  application.name: eureka-server
+server:
+  port: 7001
+eureka:
+  client:
+    # In standalone mode, you might prefer to switch off the client side behaviour,
+    # so it doesn’t keep trying and failing to reach its peers.
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  server:
+    # https://github.com/Netflix/eureka/blob/master/eureka-core/src/main/java/com/netflix/eureka/DefaultEurekaServerConfig.java
+    # https://github.com/Netflix/eureka/blob/master/eureka-core/src/main/java/com/netflix/eureka/EurekaServerConfig.java
+    eviction-interval-timer-in-ms: 5000 # default: 60 * 1000
+    # When enabled, the server keeps track of the number of renewals it should receive from the server.
+    # Any time, the number of renewals drops below the threshold percentage as defined by getRenewalPercentThreshold(),
+    # the server turns off expirations to avert danger.This will help the server in maintaining the registry information
+    # in case of network problems between client and the server.
+    enable-self-preservation: false # default: true
+
+# https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-1.5-Release-Notes
+# Actuator security
+management.security.enabled: false
+
+---
+spring:
+  profiles: eureka-server-1
+  application.name: eureka-server-1
+server:
+  port: 7001
+eureka:
+  client:
+    serviceUrl.defaultZone: http://localhost:7002/eureka/
+  server:
+    eviction-interval-timer-in-ms: 10000
+    enable-self-preservation: false
+management.security.enabled: false
+---
+spring:
+  profiles: eureka-server-2
+  application.name: eureka-server-2
+server:
+  port: 7002
+eureka:
+  client:
+    serviceUrl.defaultZone: http://localhost:7001/eureka/
+  server:
+    eviction-interval-timer-in-ms: 10000
+    enable-self-preservation: false
+management.security.enabled: false

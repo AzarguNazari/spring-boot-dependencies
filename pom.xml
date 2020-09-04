@@ -41,5 +41,6 @@
         <module>spring-boot-web</module>
         <module>spring-boot-web-thymeleaf</module>
         <module>spring-boot-webflux</module>
+        <module>eureka-microservice</module>
     </modules>
 </project>
