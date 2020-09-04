@@ -1,0 +1,31 @@
+---
+spring:
+  profiles: server
+  application:
+    name: server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    # https://github.com/Netflix/eureka/blob/master/eureka-client/src/main/java/com/netflix/appinfo/AbstractInstanceConfig.java
+    lease-expiration-duration-in-seconds: 2 # default: 90
+    lease-renewal-interval-in-seconds: 1 # default: 30
+server:
+  port: 8001
+management.security.enabled: false
+---
+spring:
+  profiles: client
+  application:
+    name: client
+server:
+  port: 8002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    lease-expiration-duration-in-seconds: 2
+    lease-renewal-interval-in-seconds: 1
+management.security.enabled: false
