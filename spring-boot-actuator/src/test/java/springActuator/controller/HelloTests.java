@@ -37,11 +37,11 @@ public class HelloTests {
                 .andExpect(content().string(equalTo("Hello World")));
     }
 
-    @Test
-    public void getNames() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/names").accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("[\"Ahmad\",\"Karim\",\"Jamshid\"]")));
-    }
+//    @Test
+//    public void getNames() throws Exception {
+//        mvc.perform(MockMvcRequestBuilders.get("/names").accept(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isOk())
+//                .andExpect(content().string(equalTo("[\"Ahmad\",\"Karim\",\"Jamshid\"]")));
+//    }
 
 }
