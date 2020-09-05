@@ -1,7 +1,7 @@
 
-package com.neo.repository;
+package com.example.repository;
 
-import com.neo.model.Message;
+import com.example.model.Message;
 
 import java.util.List;
 

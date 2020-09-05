@@ -1,9 +1,9 @@
 
-package com.neo.controller;
+package com.example.controller;
 
-import com.neo.config.BaseResult;
-import com.neo.model.Message;
-import com.neo.repository.MessageRepository;
+import com.example.config.BaseResult;
+import com.example.model.Message;
+import com.example.repository.MessageRepository;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

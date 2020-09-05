@@ -1,7 +1,7 @@
-package com.neo.controller;
+package com.example.controller;
 
-import com.neo.entity.Visitor;
-import com.neo.repository.VisitorRepository;
+import com.example.entity.Visitor;
+import com.example.repository.VisitorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,4 +1,4 @@
-package com.neo.model;
+package com.example.model;
 
 public class User {
     private Long id;

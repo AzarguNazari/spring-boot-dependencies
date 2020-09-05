@@ -1,7 +1,7 @@
-package com.neo.controller;
+package com.example.controller;
 
-import com.neo.config.BaseResult;
-import com.neo.model.User;
+import com.example.config.BaseResult;
+import com.example.model.User;
 import io.swagger.annotations.*;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

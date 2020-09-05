@@ -1,4 +1,4 @@
-package com.neo.model;
+package com.example.model;
 
 import io.swagger.annotations.ApiModelProperty;
 
