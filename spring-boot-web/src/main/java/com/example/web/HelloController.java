@@ -1,16 +1,17 @@
 package com.example.web;
 
-import java.util.Locale;
-
-import org.springframework.ui.Model;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.awt.*;
 
 @RestController
 public class HelloController {
 	
-    @RequestMapping("/hello")
-	public String hello(Locale locale, Model model) {
+    @RequestMapping(value = "/hello", consumes = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
+	public String hello() {
 		return "Hello World";
 	}
 

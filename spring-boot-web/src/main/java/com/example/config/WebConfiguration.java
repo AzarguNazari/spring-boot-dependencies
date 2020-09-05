@@ -1,4 +1,4 @@
-package com.example;
+package com.example.config;
 
 import java.io.IOException;
 
@@ -17,6 +17,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class WebConfiguration {
+
     @Bean
     public RemoteIpFilter remoteIpFilter() {
         return new RemoteIpFilter();

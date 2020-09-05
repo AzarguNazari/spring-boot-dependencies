@@ -15,17 +15,17 @@ public class UserController {
 	@Autowired
 	private UserRepository userRepository;
 	
-    @RequestMapping("/getUser")
+    @RequestMapping("/user")
     public User getUser() {
     	User user=userRepository.findByUserName("aa");
-    	System.out.println("若下面没出现“无缓存的时候调用”字样且能打印出数据表示测试成功");  
+    	System.out.println("get a user");
         return user;
     }
     
-    @RequestMapping("/getUsers")
+    @RequestMapping("/users")
     public List<User> getUsers() {
     	List<User> users=userRepository.findAll();
-    	System.out.println("若下面没出现“无缓存的时候调用”字样且能打印出数据表示测试成功");  
+    	System.out.println("List of users");
         return users;
     }
 }

@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.example.util.NeoProperties;
+import com.example.util.MyProperties;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class ProPertiesTest {
 
 	@Autowired
-    private NeoProperties neoProperties;
+    private MyProperties neoProperties;
 
     @Test
     public void getHello() throws Exception {
