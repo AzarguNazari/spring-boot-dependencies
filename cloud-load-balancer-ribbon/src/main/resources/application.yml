@@ -1,0 +1,51 @@
+---
+spring:
+  profiles: server-1
+  application:
+    name: server
+server:
+  port: 8001
+management.security.enabled: false
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    lease-expiration-duration-in-seconds: 2
+    lease-renewal-interval-in-seconds: 1
+---
+spring:
+  profiles: server-2
+  application:
+    name: server
+server:
+  port: 8002
+management.security.enabled: false
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    lease-expiration-duration-in-seconds: 2
+    lease-renewal-interval-in-seconds: 1
+---
+spring:
+  profiles: client
+  application:
+    name: client
+server:
+  port: 9001
+management.security.enabled: false
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    lease-expiration-duration-in-seconds: 2
+    lease-renewal-interval-in-seconds: 1
