@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>spring-boot-dependencies</artifactId>
+    <artifactId>spring-boot-practices</artifactId>
     <packaging>pom</packaging>
     <version>2.0.0</version>
 
@@ -40,6 +40,9 @@
         <module>spring-boot-web-thymeleaf</module>
         <module>spring-boot-webflux</module>
         <module>eureka-microservice</module>
+        <module>spring-boot-docker2</module>
+        <module>spring-boot-stomp-websocket</module>
+        <module>spring-boot-docker</module>
         <module>spring-boot-data-rest</module>
     </modules>
 </project>
