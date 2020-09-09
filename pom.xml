@@ -40,5 +40,8 @@
         <module>spring-boot-web-thymeleaf</module>
         <module>spring-boot-webflux</module>
         <module>eureka-microservice</module>
+        <module>spring-boot-docker2</module>
+        <module>spring-boot-stomp-websocket</module>
+        <module>spring-boot-docker</module>
     </modules>
 </project>
