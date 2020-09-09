@@ -43,5 +43,6 @@
         <module>spring-boot-docker2</module>
         <module>spring-boot-stomp-websocket</module>
         <module>spring-boot-docker</module>
+        <module>spring-boot-data-rest</module>
     </modules>
 </project>
