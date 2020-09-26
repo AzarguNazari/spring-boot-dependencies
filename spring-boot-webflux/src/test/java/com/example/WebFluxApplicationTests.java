@@ -21,13 +21,14 @@ public class WebFluxApplicationTests {
 	private WebClient client = WebClient.create("http://localhost:8080");
 
 	private Mono<ClientResponse> result = client.get()
-			.uri("/hello-reactive")
-			.accept(MediaType.TEXT_PLAIN)
+			.uri("/api/hello")
+			.accept(MediaType.APPLICATION_JSON)
 			.exchange();
 
 	@Test
 	public void getResult() {
-		 Assertions.assertThat(result.flatMap(res -> res.bodyToMono(String.class)).block()).isEqualTo("Hello, Spring!");
+		// test here
+		 //Assertions.assertThat(result.flatMap(res -> res.bodyToMono(Hello.class)).block()).isNotNull();
 	}
 
 }
