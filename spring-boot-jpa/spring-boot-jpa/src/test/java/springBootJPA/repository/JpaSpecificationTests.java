@@ -24,7 +24,7 @@ public class JpaSpecificationTests {
 		int page=0,size=10;
 		Sort sort = Sort.by(Sort.Direction.DESC, "id");
 		Pageable pageable = PageRequest.of(page, size, sort);
-		UserDetailParam param=new UserDetailParam();
+		UserDetailParam param = new UserDetailParam();
 		param.setIntroduction("some introduction");
 		param.setMinAge(10);
 		param.setMaxAge(30);

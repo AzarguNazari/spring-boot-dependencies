@@ -6,6 +6,7 @@ import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.HealthIndicator;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,7 +18,7 @@ public class ActuatorApplication {
 		SpringApplication.run(ActuatorApplication.class, args);
 	}
 
-	@RequestMapping("/hello")
+	@GetMapping("/hello")
 	public String index() {
 		return "Hello World";
 	}
@@ -29,7 +30,8 @@ class MyHealthIndicator implements HealthIndicator {
 	@Value("${endpoint.mycustomhealth:1}")
 	private int upCode;
 
-	@Value("${upcode-message:0}")
+	@Value("${upcode" +
+			"message:0}")
 	private int downCode;
 
 	@Override
